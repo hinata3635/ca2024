@@ -2,7 +2,7 @@
 /* RVCore_Base, RISC-V RV32I (without some LD/ST) v2024-11-09a       ArchLab, Science Tokyo */
 /********************************************************************************************/
 `default_nettype none
-// `define VERIFY                   // define this to generate verify.txt
+`define VERIFY                   // define this to generate verify.txt
 `define START_PC  0              // initial PC value
 `define D_I_TYPE  0
 `define D_R_TYPE  1
@@ -78,9 +78,9 @@ module m_rvcore ( ///// RVCore Simple Version
 
     /****************************************************************************************/
 `ifdef VERIFY
-    initial $write("\n== VERIFY is defined and generate verify.txt\n");
+    initial $write("\n== VERIFY is defined and generate mytrace.txt\n");
     integer fd;
-    initial fd = $fopen("verify.txt", "w");
+    initial fd = $fopen("mytrace.txt", "w");
     reg [31:0] r_tc = 1;
     integer i, j;
     reg r_halt = 0;
