@@ -2,7 +2,7 @@
 /* RVCore_Base, RISC-V RV32I (without some LD/ST) v2024-11-09a       ArchLab, Science Tokyo */
 /********************************************************************************************/
 `default_nettype none
-`define VERIFY                   // define this to generate verify.txt
+// `define VERIFY                   // define this to generate verify.txt
 `define START_PC  0              // initial PC value
 `define D_I_TYPE  0
 `define D_R_TYPE  1
